@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cbdc9215-71f3-4470-9669-f946e4b7dda1" name="Default Changelist" comment="Upd .gitignore">
+      <change afterPath="$PROJECT_DIR$/.idea/PHP-ECS.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/App.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/Components/DatabaseConnectionComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/Components/UserComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/DatabaseConfig.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/Systems/UserAuthenticationSystem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/Systems/UserInitSystem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EcsComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EcsConfig.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EcsContext.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EcsEntity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EcsFilterResult.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EcsFilteredEntity.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/EcsSystemsContainer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/System/EcsExecuteSystem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/System/EcsInitSystem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/System/EcsSystem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/.phpunit-watcher.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/src/Cache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/src/Exceptions/IOException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/src/Exceptions/IdNotAllowedException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/src/Exceptions/InvalidArgumentException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/src/Exceptions/InvalidConfigurationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/src/Exceptions/InvalidPropertyAccessException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/src/Exceptions/JsonException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/src/Query.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/src/QueryBuilder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/src/SleekDB.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/src/Store.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/tests/InsertingTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/tests/QueryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/tests/StoreTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/tests/TestCases/SleekDBTestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/tests/TestCases/SleekDBTestCasePlain.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/tests/coverage/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/rakibtg/sleekdb/tests/stores/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/rakibtg/sleekdb" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1o0rexqscZy2FUD5leJVyHFkJSA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/example" />
+      <recent name="$PROJECT_DIR$/example/Systems" />
+      <recent name="$PROJECT_DIR$/src/System" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
+      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cbdc9215-71f3-4470-9669-f946e4b7dda1" name="Default Changelist" comment="" />
+      <created>1612434447449</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612434447449</updated>
+      <workItem from="1612434448484" duration="24564000" />
+    </task>
+    <task id="LOCAL-00001" summary="Upd .gitignore">
+      <created>1612463447770</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612463447770</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Upd .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upd .gitignore" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="757" y="195" width="401" height="654" key="#com.intellij.ide.util.MemberChooser" timestamp="1612460682454">
+      <screen x="0" y="0" width="1920" height="1047" />
+    </state>
+    <state x="757" y="195" width="401" height="654" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1047@0.0.1920.1047" timestamp="1612460682454" />
+    <state x="734" y="232" width="447" height="580" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612460610046">
+      <screen x="0" y="0" width="1920" height="1047" />
+    </state>
+    <state x="734" y="232" width="447" height="580" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1047@0.0.1920.1047" timestamp="1612460610046" />
+    <state x="693" y="281" width="530" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612435606578">
+      <screen x="0" y="0" width="1920" height="1047" />
+    </state>
+    <state x="693" y="281" width="530" height="481" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1047@0.0.1920.1047" timestamp="1612435606578" />
+    <state x="755" y="236" width="510" height="571" key="NewPhpClassDialog" timestamp="1612461496981">
+      <screen x="0" y="0" width="1920" height="1047" />
+    </state>
+    <state x="755" y="236" width="510" height="571" key="NewPhpClassDialog/0.0.1920.1047@0.0.1920.1047" timestamp="1612461496981" />
+    <state x="464" y="158" key="SettingsEditor" timestamp="1612463208380">
+      <screen x="0" y="0" width="1920" height="1047" />
+    </state>
+    <state x="464" y="158" key="SettingsEditor/0.0.1920.1047@0.0.1920.1047" timestamp="1612463208380" />
+  </component>
+</project>

@@ -1,0 +1,21 @@
+{
+  "name": "invariance/php-ecs",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "invariance"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Invariance/Ecs\\": "src"
+    },
+    "classmap": [
+    ]
+  },
+  "require": {
+    "rakibtg/sleekdb": "^2.1"
+  }
+}
