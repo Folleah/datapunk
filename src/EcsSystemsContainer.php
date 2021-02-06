@@ -2,6 +2,8 @@
 
 namespace Invariance\Ecs;
 
+use Invariance\Ecs\Filter\EcsFilteredResult;
+use Invariance\Ecs\Filter\EcsFilterIncluded;
 use Invariance\Ecs\System\EcsExecuteSystem;
 use Invariance\Ecs\System\EcsInitSystem;
 use Invariance\Ecs\System\EcsSystem;
@@ -29,7 +31,7 @@ final class EcsSystemsContainer
 
     public function inject(object $object): self
     {
-        $this->injections[gettype($object)] = $object;
+        $this->injections[$object::class] = $object;
         return $this;
     }
 
@@ -77,21 +79,46 @@ final class EcsSystemsContainer
             $reflectSystem = new \ReflectionClass($system);
             foreach ($reflectSystem->getProperties() as $systemProp) {
                 $type = $systemProp->getType();
-                if ($type === null) {
-                    continue;
-                }
-                $type = (string)$type;
-
-                if ($type === EcsContext::class) {
-                    $systemProp->setValue($this->context);
+                $typeString = (string)$type;
+                $systemProp->setAccessible(true);
+                if ($type === null || $systemProp->isStatic() || $systemProp->isInitialized($system)) {
                     continue;
                 }
 
-                if (!array_key_exists($type, $this->injections)) {
+                // inject context
+                if ($typeString === EcsContext::class) {
+                    $systemProp->setValue($system, $this->context);
                     continue;
                 }
 
-                $systemProp->setValue($this->injections[$type]);
+                if ($typeString === EcsFilterIncluded::class) {
+                    throw new \Exception('Cant use EcsFilter type for dependency injection, use attribute instead.');
+                }
+
+                // inject filters
+                $systemPropAttributes = $systemProp->getAttributes(EcsFilterIncluded::class);
+                if (count($systemPropAttributes) > 0) {
+                    if ($typeString !== EcsFilteredResult::class) {
+                        throw new \Exception('Property with EcsFilterIncluded attribute must be a EcsFilteredResult type.');
+                    }
+
+                    $componentNames = [];
+                    foreach ($systemPropAttributes as $attribute) {
+                        $componentNames = $attribute->getArguments();
+                    }
+
+                    $systemProp->setValue($system, $this->context->filter($componentNames));
+                    continue;
+                }
+
+                if (!array_key_exists($typeString, $this->injections)) {
+                    if (!$type->allowsNull()) {
+                        throw new \Exception(sprintf('Need inject type `%s` for system `%s`.', $typeString, $reflectSystem->getName()));
+                    }
+                    continue;
+                }
+
+                $systemProp->setValue($system, $this->injections[$typeString]);
             }
         }
         $this->isInjected = true;

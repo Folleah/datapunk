@@ -1,8 +1,11 @@
 <?php declare(strict_types=1);
 
+namespace Invariance\Ecs\Example;
+
 use Invariance\Ecs\EcsContext;
 use Invariance\Ecs\EcsSystemsContainer;
-use Invariance\Ecs\Systems\UserInitSystem;
+use Invariance\Ecs\Example\Systems\UserAuthenticationSystem;
+use Invariance\Ecs\Example\Systems\UserInitSystem;
 
 class App
 {
@@ -23,6 +26,10 @@ class App
 
     public function index()
     {
-        $this->systems->execute();
+        $i = 0;
+        while ($i < 2) {
+            $this->systems->execute();
+            $i++;
+        }
     }
 }

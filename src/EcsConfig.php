@@ -4,6 +4,7 @@ namespace Invariance\Ecs;
 
 class EcsConfig
 {
-    public int $entityCacheSize = 512;
-    public int $componentCacheSize = 512;
+    public int $entitiesCacheSize = 512;
+    public int $componentsPoolCacheSize = 128;
+    public int $cachedFiltersSize = 128;
 }

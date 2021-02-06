@@ -20,7 +20,16 @@ class EcsEntity
 
     public function replace(EcsComponent $component): self
     {
-        $this->owner->replaceEntityComponent($this->id, $component);
+        $entityData = $this->getOwner()->getEntityData($this->getId());
+        $pool = $this->getOwner()->getComponentsPool($component::class);
+        $componentIdx = $entityData->getComponent($component::class);
+        if ($componentIdx !== null) {
+            $pool->set($componentIdx, $component);
+        } else {
+            $entityData->addComponent($component::class, $pool->add($component));
+            $this->getOwner()->updateFilters();
+        }
+
         return $this;
     }
 

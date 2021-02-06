@@ -10,12 +10,17 @@
   ],
   "autoload": {
     "psr-4": {
-      "Invariance/Ecs\\": "src"
+      "Invariance\\Ecs\\": "src",
+      "Invariance\\Ecs\\Example\\": "example"
     },
     "classmap": [
     ]
   },
   "require": {
+    "php": ">=8.0.1",
     "rakibtg/sleekdb": "^2.1"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
   }
 }
