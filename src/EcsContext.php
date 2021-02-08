@@ -81,41 +81,32 @@ class EcsContext
      *
      * @param string[] $componentNames
      * @return EcsFilteredResult
-     * @throws \Exception
      */
     public function filter(array $componentNames): EcsFilteredResult
     {
-        $filteredResult = new EcsFilteredResult();
         $filterName = $this->getFilterName($componentNames);
-        if (!array_key_exists($filterName, $this->cachedFilters)) {
-            return $filteredResult;
-        }
-
-        foreach ($this->cachedFilters[$filterName] as $entityIdx => $componentIdxs) {
-            foreach ($componentIdxs as $componentName => $componentIdx) {
-                $filteredResult->add($entityIdx, $this->componentsPools[$componentName]->get($componentIdx));
-            }
-        }
-
-        return $filteredResult;
+        return $this->getFilter($filterName);
     }
 
-    // very slowly, need optimization
-    public function updateFilters(): void
+    public function updateFilters(int $entityIdx, EcsEntityData $entityData): void
     {
-        $this->cachedFilters = [];
-        for ($eIdx = 0; $eIdx < $this->entitiesCount; $eIdx++) {
-            $cNames = [];
-            $cIdxs = [];
-            foreach ($this->entitiesPool[$eIdx]->getComponents() as $cName => $cIdx) {
-                $cNames[] = $cName;
-                $cIdxs[$cName] = $cIdx;
-            }
-
-            if (count($cIdxs) > 0) {
-                $this->cachedFilters[$this->getFilterName($cNames)][$eIdx] = $cIdxs;
-            }
+        $filterName = $this->getFilterName(array_keys($entityData->getComponents()));
+        $filter = $this->getFilter($filterName);
+        foreach ($entityData->getComponents() as $cName => $cIdx) {
+            $filter->add($entityIdx, $cIdx, $this->componentsPools[$cName]->get($cIdx));
         }
+    }
+
+    private function getFilter(string $filterName): EcsFilteredResult
+    {
+        if (!array_key_exists($filterName, $this->cachedFilters)) {
+            $filter = new EcsFilteredResult();
+            $this->cachedFilters[$filterName] = $filter;
+        } else {
+            $filter = $this->cachedFilters[$filterName];
+        }
+
+        return $filter;
     }
 
     private function getFilterName(array $componentNames): string

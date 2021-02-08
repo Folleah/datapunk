@@ -10,20 +10,14 @@ class EcsFilteredResult implements \Iterator, \Countable
     private int $position = 0;
     private array $components = [];
 
-    public function add(int $entityId, EcsComponent $component): void
+    public function add(int $entityIdx, int $componentIdx, EcsComponent $component): void
     {
-        $this->components[$entityId][] = $component;
+        $this->components[$entityIdx][$componentIdx] = $component;
     }
 
     public function getFirst(int $idx): EcsComponent|null
     {
         return $this->components[$idx][0] ?? null;
-    }
-
-    public function refresh(): void
-    {
-        $this->components = [];
-        $this->rewind();
     }
 
     public function getSecond(int $idx): EcsComponent|null

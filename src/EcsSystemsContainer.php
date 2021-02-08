@@ -81,7 +81,7 @@ final class EcsSystemsContainer
                 $type = $systemProp->getType();
                 $typeString = (string)$type;
                 $systemProp->setAccessible(true);
-                if ($type === null || $systemProp->isStatic() || $systemProp->isInitialized($system)) {
+                if ($type === null || $systemProp->isStatic() || ($systemProp->isInitialized($system) && $systemProp->getDefaultValue() !== null)) {
                     continue;
                 }
 

@@ -20,11 +20,9 @@ class UserAuthenticationSystem implements EcsExecuteSystem
         /** @var EcsFilteredResult $entity */
         foreach ($this->filteredEntities as $i => $_) {
             /** @var UserComponent $userComponent */
-            $userComponent = $entity->getFirst($i);
+            $userComponent = $this->filteredEntities->getFirst($i);
             $userComponent->email = 'test';
             $userComponent->name = 'test';
-
-            var_dump($userComponent);
         }
     }
 }

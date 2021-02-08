@@ -27,7 +27,7 @@ class EcsEntity
             $pool->set($componentIdx, $component);
         } else {
             $entityData->addComponent($component::class, $pool->add($component));
-            $this->getOwner()->updateFilters();
+            $this->getOwner()->updateFilters($this->getId(), $entityData);
         }
 
         return $this;
